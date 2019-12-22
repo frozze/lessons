@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Puzzle Exchange - Start</title>
+    <link rel='stylesheet' href='/css/main.css'>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class='nav-item'><a href='/start'>Start</a></li>
+                <li><span class='greet'>Welcome, puzzle lover!</span></li>
+                <li class='nav-item'><span class="sign-out">Sign Out</span></li>
+            </ul>
+        </nav>
+    </header>
+    <div class='choose-form'>
+        <h2>Choose puzzle to solve</h2>
+        <form method='POST' action='/choose'>
+            <label for='min-parts'>Minimal number of parts:</label>
+            <input type='number' name='min-parts' id='min-parts' placeholder=0>
+            <label for='max-parts'>Maximal number of parts:</label>
+            <input type='number' name='max-parts' id='max-parts'>
+            <fieldset>
+                <legend>Choose every appropriate category:</legend>
+                <label for='three-d'>three-d</label>
+                <input type='checkbox' name='category' id='three-d' value='three-d'>
+            </fieldset>
+            <label for='same-country'>In the same country:</label>
+            <input type='checkbox' name='same-country' id='same-country'>
+            <label for='grade-not-less'>Grade not less than:</label>
+            <input type='number' name='grade-not-less' id='grade-not-less'>
+            <input type='submit' class='submit-btn'>
+        </form>
+    </div>
+    <div class='add-form'>
+        <h2>Add Puzzle</h2>
+        <form method='POST' action='/add-puzzle'>
+            <label for='puzzle-name'>Puzzle name:</label>
+            <input type='text' name='puzzle-name' id='puzzle-name' placeholder='enter the puzzle name'>
+            <label for='parts-amount'>Amount of the Parts:</label>
+            <input type='number' name='parts-amount' id='parts-amount'>
+            <fieldset>
+                <legend>Choose every appropriate category:</legend>
+                <label for='three-d'>three-d</label>
+                <input type='checkbox' name='category' id='three-d' value='three-d'>
+            </fieldset>
+            <input type='submit' class='submit-btn'>
+        </form>
+    </div>
+    <div class='transfer-puzzle'>
+        <h2>Transfer Puzzle</h2>
+        <form method='POST' action='/transfer-puzzle'>
+            <label for='puzzle-name'>Puzzle name:</label>
+            <input type='text' name='puzzle-name' id='puzzle-name' placeholder='enter the puzzle name'>
+            <label for='curr-password'>Password:</label>
+            <input type='password' name='password' id='curr-password' placeholder='enter password'>
+            <input type='submit' class='submit-btn'>
+        </form>
+    </div>
+</body>
+</html>

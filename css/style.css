@@ -1,0 +1,102 @@
+section {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  	overflow: hidden;
+  	width: 100%;
+	height:50%;
+}
+
+h1, h2 {
+	padding-left: 10%;
+	
+}
+
+section .content {
+  padding-top: 1.7rem;
+  padding-bottom: 2rem;
+}
+
+section.home-intro {
+  background-color: #b2dafa;
+  background-image: url("../../img/homework_img/1100px-Tel_Aviv_Panorama.jpg");
+}
+section.home-intro h1 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 5rem;
+  color: #E33258;
+	text-shadow: 3px 3px 4px #444;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+section.home-intro h2 {
+  font-family: "Cantarell", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+	text-shadow: 5px 5px 10px black;
+  padding-top: 0.7rem;
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+  border-top: 3px solid #fffA;
+  display: inline-block;
+}
+
+section.portfolio {
+  background-color: #9DE0AD;
+}
+section.portfolio h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-family: "Cantarell", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+section.portfolio .project {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+section.portfolio .project .overlay {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(8, 8, 8, 0.7);
+  overflow: hidden;
+  z-index: 10;
+  transition: opacity 0.3s ease-in-out;
+}
+
+section.portfolio .projects {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+section.portfolio .projects .col {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+section.portfolio .project .overlay h4 {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Cantarell", sans-serif;
+  font-size: 24px;
+  color: #CDD7B6;
+}
+section.portfolio .project:hover .overlay, section.portfolio .project:focus .overlay, section.portfolio .project:active .overlay {
+  opacity: 0.4;
+}
